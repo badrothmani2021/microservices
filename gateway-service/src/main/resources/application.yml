@@ -1,0 +1,21 @@
+#
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: r1
+#          uri: lb://CUSTOMER-SERVICE
+#          predicates :
+#            - Path= /customers/**
+#        - id : r2
+#          uri: lb://PRODUCT-SERVICE
+#          predicates :
+#            - Path= /products/**
+
+# static routes configuration: application.yml
+
+# cette configuration gateway nous permet d'accedez au microservice customer et  product a partir
+#  les routes r1 et r2
+#comme exemple si on veut accedez
+#a un microservice il suffit de mettre le port 8888 de notre gateway et le path du microservice
+
